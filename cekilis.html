@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Çekiliş Oyunu</title>
+    <style>
+        body{
+            background-color:blue;
+            text-align: center;
+            border: 4px dotted black;
+            font-weight: bolder;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+    <style>
+        button{
+            border: 3px solid black;
+            font-size: 30px;
+            font-weight: bold;
+            
+        }
+    </style>
+    <style>
+        .basla:hover{
+            background-color: red;
+        }
+    </style>
+    <style>
+        .acikla{
+            text-align:left ;
+            font-size: 17px;
+            color:white;
+        }
+    </style>
+
+    <h1 id="bir">1-100 <br />Arasında sayı giriniz</h1>
+
+  </head>
+  <body>
+    <script>
+        var deneme1 = []
+        var deneme2 = []
+    </script>
+
+   <div style="display: flex; justify-content: space-between;">
+    <div>Birinci kullanıcı:
+    <input type="number" id="birincisayi"><br />
+</div>
+
+   <div>İkinci kullanıcı:
+    <input type="number" id="ikincisayi"><br />
+   </div>
+</div><br/><br/>
+<button class="basla" onclick="basla()">Çekilişi başlat !</button>
+<br/><br/><div id="kazanan">Sonuç: </div>
+<br/><br/><div id="randomgelen">Random sayı: </div>
+
+<div class="acikla">Açıklama:<br /><br> İki kullanıcıdan 1 ile 100 arasında kendi istedikleri sayının girilmesini sağlayınız.<br> Daha sonra bu girilen iki sayıdan o anda üretilen rastgele sayıya en yakın olan kişi çekilişi kazanmaktadır.</div>
+
+ <script>
+    function basla(){
+        var birincikullanici = document.getElementById("birincisayi").value
+        var ikincikullanici = document.getElementById("ikincisayi").value
+        var kazananDiv = document.querySelector('#kazanan')
+        var randomsayi = Math.floor(Math.random() * 100) + 1;
+        var birinci = birincikullanici;
+        var ikinci = ikincikullanici;
+        var uretilenrandom = document.querySelector('#randomgelen')
+        randomgelen.innerHTML = "Random üretilen sayı: " + randomsayi
+     if (Math.abs(randomsayi - birinci) < Math.abs(randomsayi - ikinci)) {
+        kazananDiv.innerHTML="Birinci kullanıcı kazandı!! Tebrikler";
+    } else if (Math.abs(randomsayi - ikinci) < Math.abs(randomsayi - birinci)) {
+        kazananDiv.innerHTML="İkinci kullanıcı kazandı!";
+    } else {
+        kazananDiv.innerHTML="Berabere kaldınız!";
+        
+    }
+}  
+  </script>
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:darkslategray;
+            color:navajowhite;
+            font-size: 20px;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        .tikla:hover{
+            background-color: rgb(7, 82, 57);
+        }
+    </style>
+    <style>
+        button{
+            background-color: black;
+            color: white;
+            border: 1px dotted white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+    <style>
+        .h1{
+            font-size: 20px;
+            text-align: center;
+            color:antiquewhite;
+        }
+    </style>
+</head>
+<h3>Finansal Özgürlük için uygula</h3>
+<h1 class="h1">Bu sayfanın amacı birikim alışkanlığı kazanmanız için kenara ayırmanız gereken bir para var. Burada biriktirdiğiniz parayı sadece yatırım için kullanabilirsiniz</h1>
+<body>
+    <div>
+     <br />  Aylık Gelirim : <input type="text" id="gelir" /><br /><br />
+    </div>
+    <button class="tikla" onclick="islem()">Hesapla</button>
+    <div id="bir"></div>
+    <div id="iki"></div>
+    <div id="uc"></div>
+    <div id="dort"></div>
+    <!--     <div id="dolar">Güncel dolar kuru:<span id="kur"></span></div>      -->
+    <script>
+        
+        function islem(){
+            var birDiv = document.querySelector('#bir')
+            var ikiDiv = document.querySelector('#iki')
+            var ucDiv = document.querySelector('#uc')
+            var dortDiv = document.querySelector('#dort')
+            var gelir = document.getElementById("gelir").value
+            var hesapla = parseInt(gelir * 0.10)
+            var kalan = (gelir - hesapla)
+            var eglence = kalan * 0.10
+            var sonkalan = kalan - eglence
+            birDiv.innerHTML= ("<br />"+"Birikim hesabına atman gereken miktar: " + hesapla + " ₺"+ "<br />")
+            //ikiDiv.innerHTML=("<br />"+"Geriye kalan paranız: " + kalan+ " ₺" +"<br />")
+            ucDiv.innerHTML=("<br />"+"Dışarıda harcamak için ayırman gereken miktar :" + eglence+ " ₺"+ "<br />")
+            dortDiv.innerHTML = ("<br />" + "Geriye kalan para : " + sonkalan + " ₺")
+        }
+        
+       
+        
+    </script>
+    
+</body>
+</html>

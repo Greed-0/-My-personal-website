@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoşgeldiniz</title>
+    <!-- Alt kısım sayfa düzeni için ayarlarım-->
+        <style>
+        body {
+            text-align: center;
+            color: white;
+            font-style:italic ;
+            font-weight: bold;
+            
+        }
+        
+    </style>
+<style>
+    button{
+        font-weight:600;
+        box-shadow: 1px 12px 5px rgba(255, 255, 255, 0.2);
+    }
+</style>
+<style>
+    .iletisim{
+        font-size: 25px;
+        color: black;
+        border: 3px dotted yellow;
+        background-color: yellow;
+    }
+</style>
+<style>
+    .iletisim:hover{
+        background-color: red;
+    }
+</style>
+<style>
+    .ilk:hover{
+        background-color:dimgray;
+    }
+</style>
+<style>
+
+</style>
+
+
+<!-- Alt kısım dijital saat bölgesi-->
+    <div id ="Saat"></div>
+    <script> 
+    const clockElement = document.querySelector("#Saat");
+    setInterval(() => {const time = new Date();
+        clockElement.style.fontSize = "30px";
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const seconds = time.getSeconds();
+    const zamandamgasi = Date.now()
+    const clockString = `
+    Saat 
+    ${hours}:${minutes}:${seconds}
+    ` ;    
+ 
+    clockElement.innerText = clockString;
+  }, 0);
+
+  </script>
+  <h1><strong>Hoşgeldiniz !</strong></h1>
+</head>
+
+<!--  Alt kısım arka plan resmi için-->
+<body style="background-image: url('https://p4.wallpaperbetter.com/wallpaper/185/963/769/dark-black-art-tree-man-hd-wallpaper-preview.jpg');">
+    <body style="background-image:
+     url('https://p4.wallpaperbetter.com/wallpaper/185/963/769/dark-black-art-tree-man-hd-wallpaper-preview.jpg'); background-size: cover;">
+     <body style="background-image:
+     url('https://p4.wallpaperbetter.com/wallpaper/185/963/769/dark-black-art-tree-man-hd-wallpaper-preview.jpg'); background-position: center ;">
+
+<!-- Alt kısım buton içeriği-->
+     <div style="display: flex; justify-content: space-between;">
+     <button class="ilk" onclick="window.location='Almanca.html'">Almanca dersi için tıklayınız</button><br / >
+     <button class="ilk" onclick="window.location='oyun.html'">Oyun için tıklayınız</button><br / >
+     <button class="ilk" onclick="window.location='https://www.google.com.tr/'">Google için tıklayınız</button><br / >
+     <button class="ilk" onclick="window.location='https://www.youtube.com/'">Youtube için tıklayınız</button><br / >
+     <button class="ilk" onclick="window.location='cekilis.html'">Çekiliş için tıklayınız</button><br / >
+     </div><br /><br />
+     <!--   <button class="ilk" onclick="window.location='kayit.html'" > Kayıt olmak için lütfen tıklayınız</button><br /><br />
+     <button class="ilk" onclick="window.location='giris.html'" > Giriş yapmak için lütfen tıklayınız</button><br /><br />    --->
+     <button class="ilk" onclick="window.location = './finans.html'">Finansal Özgürlük için tıklayınız</button><br /><br />
+     <button class="iletisim" onclick="window.location ='iletisim.html'">İletişim</button>
+     <body>
+    
+</body>
+</html>
